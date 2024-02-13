@@ -199,66 +199,136 @@ footer {
 footer a {
   color: fuchsia;
 }
+
 /* Media Queries */
 
-/* Desktop (1200px e oltre) */
+/* Desktop e oltre (1200px e oltre) */
 @media only screen and (min-width: 1200px) {
   main {
     overflow: auto;
   }
-  .video-container,
-  section#ciao {
-    float: left;
-    width: calc(50% - 15px);
-    margin-right: 30px;
-    clear: both;
-  }
-  .video-container:last-child {
-    margin-right: 0;
-  }
+
   table {
     margin: 0 auto;
+    width: 100%;
   }
-}
 
-/* Valutazione globale della pagina su schermi grandi da 1200 px in su */
-/* Si tratta di una valutazione complessiva della formattazione e degli sp
-  
-  /* Media Queries */
-
-/* Tablet (768px - 1199px) */
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  /* Aggiustamento della larghezza della sezione "Novità" */
-  .video-container {
-    width: 45%;
-    height: 27rem;
-    vertical-align: middle;
-    margin-block-end: 2.5rem;
+  #change p {
+    text-align: center;
+    font-size: 1.5rem;
   }
-  table {
-    margin: 0 auto;
-  }
-}
 
-/* Mobile (fino a 767px) */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* Modifiche per dispositivi mobili */
-  header div {
-    display: block;
+  #change form {
     text-align: center;
   }
+
+  #change input {
+    width: 30rem;
+  }
+}
+
+/* Media Queries */
+
+/* Desktop (768px - 1199px) */
+/*Aggiustamento della parte iniziale (home,img,p)*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  header {
+    height: 10rem;
+    padding: 0 1rem;
+  }
+
+  header div {
+    height: 100%;
+    float: left;
+  }
+
+  header div img {
+    width: 15rem;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  header p {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+  }
+
   header nav {
-    display: none;
+    float: right;
+    height: 10rem;
+    line-height: 10rem;
   }
-  main {
-    display: block;
+
+  header li {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-right: 1rem;
   }
-  section#ciao {
+
+  /* Aggiustamento della larghezza della sezione novità e video */
+  .video-container {
     width: 100%;
-    order: -1; /* Sposto la sezione "Novità" all'inizio della pagina */
-    margin-bottom: 20px; /* Spazio inferiore */
   }
+
+  .video-container iframe {
+    width: calc(50% - 5px);
+    float: left;
+    height: 17rem;
+  }
+
+  .video-container #change {
+    width: calc(50% - 5px);
+    float: left;
+    border-radius: 1.5rem;
+    height: 17rem;
+  }
+
+  /*Aggiustamento testo novità*/
+  #change h2 {
+    border: 1px solid transparent;
+    background-color: rgb(158, 158, 158);
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+
+  #change p {
+    text-align: start;
+    line-height: 2;
+    font-size: 1.3rem;
+    padding-right: 0.7rem;
+  }
+
+  #change input {
+    width: 23rem;
+  }
+
+  /*Aggiustamento tabella*/
   table {
     margin: 0 auto;
+    width: 80%;
+  }
+
+  /*Aggiustamento articoli correlati*/
+  aside div {
+    display: inline-block;
+    width: calc((100% - 20px) / 3);
+  }
+}
+
+/* Tablet (fino a 767px) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* Modifiche per tablet */
+  table {
+    margin: 0 auto;
+  }
+}
+
+/*Mobile (fino a 576px)*/
+/* Modifiche per dispositivi mobili */
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  table {
+    text-align: start;
   }
 }
